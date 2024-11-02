@@ -1,0 +1,509 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+/* html1以下スムーズスクロール */
+html { 
+	scroll-behavior: smooth;
+}
+
+/* main内の横幅・中央寄せ*/
+main{
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* リンクホバー時透過*/
+a:hover{
+    opacity: 0.7;
+}
+
+/* MV BGの設定 */
+#mv{
+	background-image: url(../img/mainbg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 160px 0;
+}
+
+/* h1 */
+h1{
+	text-align: center;
+	color: #fff;
+	font-size: 48px;
+	line-height: 1;
+}
+
+/* h1(span内の文字設定) */
+h1 span{
+	font-size: 36px;
+	line-height: 116px;
+	font-weight: lighter;
+}
+
+/* グロナビ（大枠） */
+#nav{
+	height: 80px;
+	border-bottom: #efefef solid 1px;
+}
+
+/* グロナビ（内側 横幅） */
+#nav .inner{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+/* グロナビ（左ロゴ） */
+#nav .inner .mainlogo{
+	padding: 10px 0;
+}
+
+#nav .inner .mainlogo img{
+	height: 60px;
+}
+
+/* グロナビ（右リンク） */
+#nav .inner ul li{
+	font-size: 21px;
+	display: inline-block;
+}
+
+#nav .inner ul li a{
+	color: #000;
+	vertical-align: middle;
+    line-height: 80px;
+    padding: 20px 15px;
+}
+
+/* EVENTリンク色付け */
+#nav .inner ul li .event{
+	background-color: #ffd61a;
+}
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+/* 小見出し */
+.ttl{
+	text-align: center;
+	margin-bottom: 64px;
+}
+
+/* 小見出し下のテキスト設定 */
+.ttl h2{
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 24px;
+	color: #222;
+}
+
+/* #about
+---------------------*/
+
+/* #about 上下余白 */
+#about{
+	padding: 120px 0 80px;
+}
+
+/* #about h2色 */
+#about .ttl h2{
+	color: #ffd61a;
+}
+
+/* #about p中央寄せ 下余白 */
+#about .txt p{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* .slide
+---------------------*/
+
+/* .slider 横幅・指定領域外非表示 */
+.slider{
+	max-width: 960px;
+	overflow: hidden;
+  }
+
+/* 各スライド 横幅 */
+.slider div {
+	width: 385px;
+}
+  
+
+.slide .slick-list {
+    overflow: unset;
+}
+
+
+/* #cource
+---------------------*/
+
+/* #cource 上余白 */
+#cource{
+	padding-top: 64px;
+}
+
+/*  */
+#cource .grid-container{
+	display: flex;
+	justify-content: center;
+}
+
+#cource .grid-container .grid-flex{
+	display: flex;
+	overflow: hidden;
+	width: 50%;
+}
+
+#cource .grid-container .grid-flex h3{
+	margin-bottom: 40px;
+	line-height: 1;
+}
+
+#cource .grid-container .txt-box-r,
+#cource .grid-container .txt-box-l{
+	background-color: #efefef;
+	align-items: center;
+}
+
+#cource .grid-container .txt-box-r .inner{
+	margin-left: 48px;
+	margin-right: 48px;
+}
+#cource .grid-container .txt-box-l .inner{
+	margin-right: 48px;
+	margin-left: 48px;
+}
+
+/* #news
+---------------------*/
+#news {
+	padding: 64px 0 48px;
+}
+
+#news .ttl h2{
+	color: #ffd61a;
+}
+
+#news .field{
+	display: flex;
+	justify-content: space-between;
+	column-gap: 32px;
+}
+
+#news .field .n-box{
+	width: 100%; 
+	display: flex;
+	margin-bottom: 56px;
+}
+
+#news .field .n-box img{
+	margin-bottom: 32px;
+}
+
+#news .field .n-box .date{
+	margin-bottom: 24px;
+}
+
+#news .field .n-box .date,
+#news .field .n-box .txt{
+	color: #000;
+}
+
+#news .btn {
+	text-align: center;
+}
+
+#news .btn a {
+	background: #ffd61a;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 300px;
+	padding: 10px 25px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* #access
+---------------------*/
+#access {
+	padding: 64px 0 80px;
+	background-color: #fafafa;
+}
+
+#access .map{
+	text-align: center;
+	margin-bottom: 64px;
+}
+
+#access .info{
+	width: 650px;
+	margin: 0 auto;
+}
+
+#access .info th{
+	text-align: left;
+	font-weight: normal;
+	padding-right: 48px;
+	padding-bottom: 24px;
+}
+
+
+/* #contact
+---------------------*/
+#contact{
+	padding-top: 64px;
+}
+
+#contact .txt {
+	margin-bottom: 80px;
+}
+
+#contact .txt p{
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+#contact .form {
+	width: 700px;
+	margin: 0 auto 150px;
+}
+#contact .form dl {
+	display: table;
+}
+
+#contact .form .text{
+	margin-bottom: 24px;
+}
+#contact .form .text:nth-child(3){
+	margin-bottom: 40px;
+}	
+#contact .form dl dt,
+#contact .form  dl dd {
+	display: table-cell;
+}
+
+#contact .form dl dt{
+	width: 240px;
+	padding-right: 120px;
+	vertical-align: top;
+}
+
+#contact .form  dl dd input{
+	border: solid 1px #bfbfbf;
+}
+
+#contact .form .text dd input{
+	width: 328px;
+	height: 36px;
+}
+
+#contact .form .checkbox dd label{
+	display: block;
+	margin-bottom: 24px;
+}
+
+#contact .form .checkbox dd label span{
+	padding-left: 40px;
+}
+#contact .form .checkbox input[type="checkbox"] {
+	width: 24px;
+	height: 24px;
+}
+#contact .form .checkbox input {
+	border: solid 1px #f0ebe5;
+	accent-color: #f0ebe5;
+}
+
+#contact .form .conatct dd textarea{
+	border: solid 1px #bfbfbf;
+	width: 328px;
+	height: 108px;
+	margin-bottom: 40px;
+}
+#contact .form button{
+	background: #ffd61a;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 298px;
+	padding: 18px 131px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 1;
+}
+#contact .form button:hover{
+    opacity: 0.7;
+}
+
+/* #event
+---------------------*/
+#event {
+	padding: 40px 0 ;
+	background-color: #ffd61a;
+	cursor: pointer;
+}
+
+/* 以下ボタンスタイル */
+#event button {
+	background: #f8914d;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 298px;
+	padding: 18px 95px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 1;
+}
+
+#event button:hover{
+	opacity: 0.7;
+}
+
+#openModal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+/* モーダルCSS */
+.modalArea {
+	display: none;
+	position: fixed;
+	z-index: 10; /*サイトによってここの数値は調整 */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .modalBg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	width: 70%;
+	max-width: 700px;
+	padding: 10px 30px;
+	background-color: #fff;
+	border: #ffd61a solid 10px;
+  }
+  
+  .closeModal {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	cursor: pointer;
+  }
+
+  .modalArea h2,
+  .modalArea p,
+  .modalArea h3 {
+	margin-bottom: 15px;
+  }
+  
+  .modalArea h2{
+	background: linear-gradient(transparent 60%, #f8914d 40%);
+	display: inline-block;
+  }
+
+  .modalArea h3{
+	background: linear-gradient(transparent 60%, #ffd61a 40%);
+	display: inline-block;
+  }
+
+  .modalArea dl {
+	display: table;
+	margin-bottom: 10px;
+  }
+
+  .modalArea dl dt,
+  .modalArea dl dd {
+		display: table-cell;
+  }
+
+  .modalArea dl dt{
+	width: 150px;
+  }
+/*to-top
+---------------------*/
+.to-top{
+	position: fixed;
+	bottom: 12px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+	background-color: #ffd61a;
+	display: block;
+	text-align: center;
+	border-radius: 30px;
+}
+.to-top::before {
+	content: '\f062';
+	font-family: 'Font Awesome 6 Free';
+	font-size: 30px;
+	font-weight: 900;
+	color: #fff;
+	line-height: 60px;
+  }
+
+/* footer
+---------------------*/
+footer{
+	padding: 32px 0;
+	background-color: #707070;
+	text-align: center;
+}
+
+footer p{
+	font-size: 18px;
+	color: #fff;
+	line-height: 1;
+}
+/*
+---------------------*/
